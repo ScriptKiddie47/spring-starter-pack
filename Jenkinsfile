@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh '''
-                cat settings.gradle
+                echo ${WORKSPACE}
                 echo "doing test stuff.."
                 '''
             }
