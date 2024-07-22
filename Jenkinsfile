@@ -25,6 +25,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh '''
+                cat settings.gradle
                 echo "doing test stuff.."
                 '''
             }
