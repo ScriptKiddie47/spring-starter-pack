@@ -16,6 +16,7 @@ pipeline {
                 sh '''
                 java -version
                 gradle -v
+                ./gradlew clean build
                 echo "doing build stuff.."
                 '''
             }
