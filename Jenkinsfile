@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh '''
-                echo ${WORKSPACE}
+                ls -al
                 echo "doing test stuff.."
                 '''
             }
