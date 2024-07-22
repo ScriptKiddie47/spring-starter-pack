@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh '''
-                java -v
+                java -version
                 gradle -v
                 echo "doing build stuff.."
                 '''
