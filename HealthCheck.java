@@ -13,7 +13,7 @@ public class HealthCheck {
             System.out.println(arg);
         }
 
-        String httpEndpoint = "https://reqre.in/api/users/2";
+        String httpEndpoint = "https://reqres.in/api/users/2";
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .uri(new URI(httpEndpoint))
                 .GET()

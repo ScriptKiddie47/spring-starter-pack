@@ -22,13 +22,17 @@ pipeline {
             }
         }
         stage('Test') {
+            environment {
+                CLIENT_ID = credentials('client_id')
+                CLIENT_SECRET = credentials('client_secret')
+            }
             steps {
                 echo 'Testing..'
                 sh '''
                 ls -al
-                java HealthCheck.java Hello There WonderFull People 1 2 3
                 echo "doing test stuff.."
                 '''
+                sh 'java HealthCheck.java ${CLIENT_ID} ${CLIENT_SECRET}'
             }
         }
         stage('Deliver') {
