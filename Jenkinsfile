@@ -26,7 +26,7 @@ pipeline {
                 echo 'Testing..'
                 sh '''
                 ls -al
-                java HealthCheck.java
+                java HealthCheck.java Hello There WonderFull People 1 2 3
                 echo "doing test stuff.."
                 '''
             }

@@ -6,6 +6,13 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 public class HealthCheck {
     public static void main(String[] args) throws Exception {
+
+        System.out.println("Arguments: " + args.length);
+
+        for (String arg : args) {
+            System.out.println(arg);
+        }
+
         String httpEndpoint = "https://reqre.in/api/users/2";
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .uri(new URI(httpEndpoint))
